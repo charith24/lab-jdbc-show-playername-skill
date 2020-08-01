@@ -18,10 +18,6 @@ class Main{
 		SkillDAO skilldao= new SkillDAO();
 		PlayerDAO playerdao = new PlayerDAO();
 		List<Player>list=new ArrayList<Player>();
-		System.out.println("Enter the Skill ID");
-		long id = Long.parseLong(in.nextLine());
-		Skill skill=skilldao.getSkillByID(id);
-		System.out.println("Skill_Id:"+skill.getSkillId()+" "+"Skill_Name:"+skill.getSkillName());
 		
 		list=playerdao.getAllPlayers();
 		for (Player p : list) {

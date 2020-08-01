@@ -23,6 +23,7 @@ public class PlayerDAO{
 		 ResultSet rs = st.executeQuery(sql);
 		 while(rs.next()) {
 			 skill=skilldao.getSkillByID(rs.getLong(4));
+	
 			 Player player=new Player(rs.getLong(1),rs.getString(2),rs.getString(3),skill);
 			 list.add(player);
 		 }
